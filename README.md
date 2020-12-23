@@ -1,10 +1,7 @@
 ### TestVideo
 
-<video width="320" height="200" controls preload> 
-    <source src="https://github.com/hfmrow/fake-repo/blob/main/readme/wm.webm"></source> 
-</video>
 
-
+[<img src="readme/hash.png" width="50%">](https://raw.githubusercontent.com/hfmrow/fake-repo/main/readme/wm.webm)
 
 
 
