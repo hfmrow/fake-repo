@@ -1,6 +1,9 @@
-<video width= "320" height="240" controls>
-  <source src="readme/wm.webm" type="video/webm">
- </video>
+### TestVideo
+
+<video width="320" height="200" controls preload> 
+    <source src="/readme/wm.webm"></source> 
+</video>
+
 
 
 
