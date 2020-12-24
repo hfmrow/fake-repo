@@ -7,11 +7,11 @@
 
 ---
 
-<Link route={'https://youtu.be/3ava4MVEu_I'}>
+<Link route={''}>
                 <a target="_blank" rel="noreferrer">
                   <img
-                    alt="头像"
-                    src="none"
+                    alt="readme/hash.png"
+                    src="https://youtu.be/3ava4MVEu_I"
                     onError={handleImgError}
                   />
                 </a>
