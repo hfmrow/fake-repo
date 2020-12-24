@@ -7,11 +7,11 @@
 
 ---
 
-<Link route={'/user-details'}>
+<Link route>
   <a target="_blank" rel="noreferrer">
     <img
-      alt="Launch demo video"
-      src={https://youtu.be/3ava4MVEu_I}
+      alt="readme/hash.png"
+      src="https://youtu.be/3ava4MVEu_I"
       onError={handleImgError}
     />
   </a>
