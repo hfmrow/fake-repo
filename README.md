@@ -7,12 +7,11 @@
 
 ---
 
-<Link route>
-  <a target="_blank" rel="noreferrer">
+[[Launch demo video]<a target="_blank" rel="noreferrer">
     <img
-      alt="readme/hash.png"
-      src="https://youtu.be/3ava4MVEu_I"
+      alt="Launch demo video"
+      src="readme/hash.png"
+      width="10%"
       onError={handleImgError}
     />
-  </a>
-</Link>
+  </a>](https://youtu.be/3ava4MVEu_I)
