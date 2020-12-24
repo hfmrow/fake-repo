@@ -8,4 +8,4 @@
 
 ---
 
-[link text](https://youtu.be/3ava4MVEu_I){:target="_blank"}
+< a href="https://youtu.be/3ava4MVEu_I" target="_blank" rel=“noreferrer noopener”> Title < /a >
