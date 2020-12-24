@@ -3,7 +3,7 @@
 ### TestVideo 1
 
 
-[[Launch demo video]<img src="readme/hash.png" width="10%">](https://youtu.be/3ava4MVEu_I)
+[[Launch demo video]<a target="_blank" rel="noreferrer"><img src="readme/hash.png" width="10%">](https://youtu.be/3ava4MVEu_I)
 
 ---
 
