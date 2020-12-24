@@ -3,4 +3,4 @@
 ### TestVideo 1
 
 
-[<img src="readme/wm-prev.gif" width="100%">](https://youtu.be/3ava4MVEu_I)
+[<img src="readme/wm-prev.gif" width="10%">](https://youtu.be/3ava4MVEu_I)
