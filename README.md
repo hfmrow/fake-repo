@@ -3,5 +3,5 @@
 ### TestVideo
 
 
-[[Launch demo video]<img src="readme/hash.png" width="10%">](https://mega.nz/file/8OwzQYoR#N6x22RpI8-JFKDOvWEd8E2I65pkLaNMnRAkbp1Egp3o)
+[[Launch demo video]<img src="readme/hash.png" width="10%">](https://youtu.be/lG7utBwwww0)
 
