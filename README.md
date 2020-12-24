@@ -1,3 +1,5 @@
+markdown: kramdown
+
 # TEST repository, not to be used publicly ...
 
 ### TestVideo
