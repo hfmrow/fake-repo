@@ -1,4 +1,4 @@
-# sys\_mon
+# sys_mon
 
 ```go
 import "github.com/hfmrow/genLib/tools/monitoring/sys_mon"
@@ -76,11 +76,11 @@ import "github.com/hfmrow/genLib/tools/monitoring/sys_mon"
 func ForceRebuildPackage(rebuild ...bool) bool
 ```
 
-Clean up the cache used by the package\, on the next launch\, the source code 'C' will be forced to be rebuilt\. typically used in the development process for debugging purposes\.
+Clean up the cache used by the package, on the next launch, the source code 'C' will be forced to be rebuilt. typically used in the development process for debugging purposes.
 
 ## type CpuFs
 
-Structure to hold values retrieved from: '/sys/devices/system/cpu/cpufreq/policy\*' directories
+Structure to hold values retrieved from: '/sys/devices/system/cpu/cpufreq/policy*' directories
 
 ```go
 type CpuFs struct {
@@ -97,19 +97,19 @@ type CpuFs struct {
 func CpuFsNew() (*CpuFs, error)
 ```
 
-### func \(\*CpuFs\) Close
+### func (*CpuFs) Close
 
 ```go
 func (cf *CpuFs) Close()
 ```
 
-### func \(\*CpuFs\) CurrFreqUpdate
+### func (*CpuFs) CurrFreqUpdate
 
 ```go
 func (cf *CpuFs) CurrFreqUpdate() error
 ```
 
-### func \(\*CpuFs\) ListUpdate
+### func (*CpuFs) ListUpdate
 
 ```go
 func (cf *CpuFs) ListUpdate() error
@@ -131,17 +131,17 @@ type CpuPercentPid struct {
 func CpuPercentPidNew(pid int) (*CpuPercentPid, error)
 ```
 
-CpuPercentPidNew: Create and initialise 'C' structure\.
+CpuPercentPidNew: Create and initialise 'C' structure.
 
-### func \(\*CpuPercentPid\) Close
+### func (*CpuPercentPid) Close
 
 ```go
 func (s *CpuPercentPid) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*CpuPercentPid\) Update
+### func (*CpuPercentPid) Update
 
 ```go
 func (v *CpuPercentPid) Update() error
@@ -164,23 +164,23 @@ type Diskstats struct {
 func DiskstatsNew() (*Diskstats, error)
 ```
 
-DiskstatsNew: Create and initialise 'C' structure\.
+DiskstatsNew: Create and initialise 'C' structure.
 
-### func \(\*Diskstats\) Close
+### func (*Diskstats) Close
 
 ```go
 func (s *Diskstats) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*Diskstats\) Update
+### func (*Diskstats) Update
 
 ```go
 func (s *Diskstats) Update() error
 ```
 
-Update: 'Diskstats' structure\.
+Update: 'Diskstats' structure.
 
 ## type MapHeader
 
@@ -198,7 +198,7 @@ type MapHeader struct {
 }
 ```
 
-### func \(\*MapHeader\) ToString
+### func (*MapHeader) ToString
 
 ```go
 func (v *MapHeader) ToString() string
@@ -269,23 +269,23 @@ type Meminfo struct {
 func MeminfoNew() (*Meminfo, error)
 ```
 
-MeminfoNew: Create and initialise 'C' structure\.
+MeminfoNew: Create and initialise 'C' structure.
 
-### func \(\*Meminfo\) Close
+### func (*Meminfo) Close
 
 ```go
 func (s *Meminfo) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*Meminfo\) Update
+### func (*Meminfo) Update
 
 ```go
 func (s *Meminfo) Update() (*Meminfo, error)
 ```
 
-Update: 'Meminfo' structure\.
+Update: 'Meminfo' structure.
 
 ## type NanoMeasureMethod
 
@@ -323,23 +323,23 @@ type Partitions struct {
 func PartitionsNew() (*Partitions, error)
 ```
 
-PartitionsNew: Create and initialise 'C' structure\.
+PartitionsNew: Create and initialise 'C' structure.
 
-### func \(\*Partitions\) Close
+### func (*Partitions) Close
 
 ```go
 func (s *Partitions) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*Partitions\) Update
+### func (*Partitions) Update
 
 ```go
 func (s *Partitions) Update() error
 ```
 
-Update: 'Partitions' structure\.
+Update: 'Partitions' structure.
 
 ## type PidInfos
 
@@ -356,23 +356,23 @@ type PidInfos struct {
 func PidInfosNew() (*PidInfos, error)
 ```
 
-PidInfosNew: Create and initialise 'C' structure\. No need to 'free' \(close\) anything\, everything is already handled\.
+PidInfosNew: Create and initialise 'C' structure. No need to 'free' (close) anything, everything is already handled.
 
-### func \(\*PidInfos\) GetPidFromFilename
+### func (*PidInfos) GetPidFromFilename
 
 ```go
 func (sf *PidInfos) GetPidFromFilename(filename string) int
 ```
 
-Get pid using the filename base\. Returns "\-1" if not found\.
+Get pid using the filename base. Returns "-1" if not found.
 
-### func \(\*PidInfos\) GetPidFromName
+### func (*PidInfos) GetPidFromName
 
 ```go
 func (sf *PidInfos) GetPidFromName(name string) int
 ```
 
-Get pid using the name\. Note: Instead of a presious\, this function is based on a 'comm' field which contains only 16 bytes\, which means that if the name is greater than 16 characters\, it will be truncated\. Returns "\-1" if not found\.
+Get pid using the name. Note: Instead of a presious, this function is based on a 'comm' field which contains only 16 bytes, which means that if the name is greater than 16 characters, it will be truncated. Returns "-1" if not found.
 
 ## type ProcNetDev
 
@@ -394,17 +394,17 @@ type ProcNetDev struct {
 func ProcNetDevNew(pid ...uint32) (*ProcNetDev, error)
 ```
 
-ProcNetDevNew: Create and initialize the "C" structure\. If a "pid" is given\, the statistics relate to the process\. Otherwise\, it's the overall flow
+ProcNetDevNew: Create and initialize the "C" structure. If a "pid" is given, the statistics relate to the process. Otherwise, it's the overall flow
 
-### func \(\*ProcNetDev\) Close
+### func (*ProcNetDev) Close
 
 ```go
 func (s *ProcNetDev) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*ProcNetDev\) GetAvailableInterfaces
+### func (*ProcNetDev) GetAvailableInterfaces
 
 ```go
 func (s *ProcNetDev) GetAvailableInterfaces() []string
@@ -412,15 +412,15 @@ func (s *ProcNetDev) GetAvailableInterfaces() []string
 
 Retrieve available network interfaces
 
-### func \(\*ProcNetDev\) GetWanAdress
+### func (*ProcNetDev) GetWanAdress
 
 ```go
 func (s *ProcNetDev) GetWanAdress(adress string, useStunSrv ...bool) (string, error)
 ```
 
-GetWanAdress: Retrieve wan adress using http get method or using a 'stun' server whether 'useStunSrv' was toggled\. http get: "ifconfig\.co" stun srv: "stun1\.l\.google\.com:19302"
+GetWanAdress: Retrieve wan adress using http get method or using a 'stun' server whether 'useStunSrv' was toggled. http get: "ifconfig.co" stun srv: "stun1.l.google.com:19302"
 
-### func \(\*ProcNetDev\) SetSuffix
+### func (*ProcNetDev) SetSuffix
 
 ```go
 func (s *ProcNetDev) SetSuffix(suffix string) error
@@ -428,7 +428,7 @@ func (s *ProcNetDev) SetSuffix(suffix string) error
 
 SetSuffix:
 
-### func \(\*ProcNetDev\) SetUnit
+### func (*ProcNetDev) SetUnit
 
 ```go
 func (s *ProcNetDev) SetUnit(unit string) error
@@ -436,7 +436,7 @@ func (s *ProcNetDev) SetUnit(unit string) error
 
 SetUnit:
 
-### func \(\*ProcNetDev\) Update
+### func (*ProcNetDev) Update
 
 ```go
 func (s *ProcNetDev) Update() error
@@ -510,29 +510,29 @@ type ProcPidStat struct {
 func ProcPidStatNew(pid int) (*ProcPidStat, error)
 ```
 
-ProcPidStatNew: Create and initialise 'C' structure\.
+ProcPidStatNew: Create and initialise 'C' structure.
 
-### func \(\*ProcPidStat\) Close
+### func (*ProcPidStat) Close
 
 ```go
 func (s *ProcPidStat) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*ProcPidStat\) Update
+### func (*ProcPidStat) Update
 
 ```go
 func (s *ProcPidStat) Update() error
 ```
 
-Update: 'ProcPidStat' structure\.
+Update: 'ProcPidStat' structure.
 
 ## type Smaps
 
-\* Structures functions\, this section handle files like 'smaps'\, 'smaps\_rollup'\, \* 'maps' is not used here because information are contained inside 'smaps' \* via 'Header' variable of 'Rollup' or 'Smaps' structures
+* Structures functions, this section handle files like 'smaps', 'smaps_rollup', * 'maps' is not used here because information are contained inside 'smaps' * via 'Header' variable of 'Rollup' or 'Smaps' structures
 
-Information 'man procfs' search '/smaps' then press 'n' until '/proc/\[pid\]/smaps'
+Information 'man procfs' search '/smaps' then press 'n' until '/proc/[pid]/smaps'
 
 ```go
 type Smaps struct {
@@ -553,31 +553,31 @@ type Smaps struct {
 func SmapsNew(pid int, maxReadEntries ...int) (*Smaps, error)
 ```
 
-StatNew: Create a new structure that will contains required information about 'proc/\[pid\]/stat' files 'maxReadEntries' define the length of the buffer to read 'smaps' file\, default is set to 2k\.
+StatNew: Create a new structure that will contains required information about 'proc/[pid]/stat' files 'maxReadEntries' define the length of the buffer to read 'smaps' file, default is set to 2k.
 
-### func \(\*Smaps\) Close
+### func (*Smaps) Close
 
 ```go
 func (s *Smaps) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*Smaps\) UpdateRollup
+### func (*Smaps) UpdateRollup
 
 ```go
 func (s *Smaps) UpdateRollup() error
 ```
 
-Update: 'C' structure content with actual values\.
+Update: 'C' structure content with actual values.
 
-### func \(\*Smaps\) UpdateSmaps
+### func (*Smaps) UpdateSmaps
 
 ```go
 func (s *Smaps) UpdateSmaps() error
 ```
 
-Update: 'C' structure content with actual values\.
+Update: 'C' structure content with actual values.
 
 ## type StatusFile
 
@@ -631,11 +631,11 @@ type StatusFile struct {
 func StatusFileNew(pid int) (*StatusFile, error)
 ```
 
-StatusFileNew: create and initialize the "C" structure\. No need to 'free' \(close\) anything\, everything is already handled\.
+StatusFileNew: create and initialize the "C" structure. No need to 'free' (close) anything, everything is already handled.
 
 ## type SysTherm
 
-Structure to hold Thermal information retrieved from: '/sys/class/hwmon/hwmon\*' directories\. Note: "n/a"\, "\-0°C" or "\-1" value means not available data\.
+Structure to hold Thermal information retrieved from: '/sys/class/hwmon/hwmon*' directories. Note: "n/a", "-0°C" or "-1" value means not available data.
 
 ```go
 type SysTherm struct {
@@ -650,7 +650,7 @@ type SysTherm struct {
 func SysThermNew() (*SysTherm, error)
 ```
 
-### func \(\*SysTherm\) Close
+### func (*SysTherm) Close
 
 ```go
 func (st *SysTherm) Close()
@@ -658,7 +658,7 @@ func (st *SysTherm) Close()
 
 Close: and free memory used for structure storage
 
-### func \(\*SysTherm\) Update
+### func (*SysTherm) Update
 
 ```go
 func (st *SysTherm) Update() error
@@ -684,17 +684,17 @@ type TimeSpent struct {
 func TimeSpentNew(method ...NanoMeasureMethod) (*TimeSpent, error)
 ```
 
-TimeSpentNew: Create and initialise 'C' structure\. if argument is set to \-1\, the default value is 'NANO\_CLOCK\_WALL'
+TimeSpentNew: Create and initialise 'C' structure. if argument is set to -1, the default value is 'NANO_CLOCK_WALL'
 
-### func \(\*TimeSpent\) Close
+### func (*TimeSpent) Close
 
 ```go
 func (s *TimeSpent) Close()
 ```
 
-Close: Freeing 'C' structure\.
+Close: Freeing 'C' structure.
 
-### func \(\*TimeSpent\) MesurementMethodGet
+### func (*TimeSpent) MesurementMethodGet
 
 ```go
 func (s *TimeSpent) MesurementMethodGet() int
@@ -702,7 +702,7 @@ func (s *TimeSpent) MesurementMethodGet() int
 
 GetMesurementMethod:
 
-### func \(\*TimeSpent\) MesurementMethodSet
+### func (*TimeSpent) MesurementMethodSet
 
 ```go
 func (s *TimeSpent) MesurementMethodSet(method NanoMeasureMethod)
@@ -710,7 +710,7 @@ func (s *TimeSpent) MesurementMethodSet(method NanoMeasureMethod)
 
 SetMesurementMethod:
 
-### func \(\*TimeSpent\) NanoCalculate
+### func (*TimeSpent) NanoCalculate
 
 ```go
 func (s *TimeSpent) NanoCalculate() float64
@@ -718,23 +718,23 @@ func (s *TimeSpent) NanoCalculate() float64
 
 NanoCalculate: calculate the nanoseconds between 2 measurement periods
 
-### func \(\*TimeSpent\) NanoGet
+### func (*TimeSpent) NanoGet
 
 ```go
 func (s *TimeSpent) NanoGet()
 ```
 
-NanoGet: get current nano count measurement depend on defined 'method' argument 'NANO\_CLOCK\_WALL' or 'NANO\_CLOCK\_CPUTIME' Value is internally stored\.
+NanoGet: get current nano count measurement depend on defined 'method' argument 'NANO_CLOCK_WALL' or 'NANO_CLOCK_CPUTIME' Value is internally stored.
 
-### func \(\*TimeSpent\) SpentGet
+### func (*TimeSpent) SpentGet
 
 ```go
 func (s *TimeSpent) SpentGet() float64
 ```
 
-GetSpent: time previously calculated\.
+GetSpent: time previously calculated.
 
-### func \(\*TimeSpent\) TicksCalculate
+### func (*TimeSpent) TicksCalculate
 
 ```go
 func (s *TimeSpent) TicksCalculate() float64
@@ -742,11 +742,11 @@ func (s *TimeSpent) TicksCalculate() float64
 
 TicksCalculate: calculate tick between 2 tick periods
 
-### func \(\*TimeSpent\) TicksGet
+### func (*TimeSpent) TicksGet
 
 ```go
 func (s *TimeSpent) TicksGet()
 ```
 
-TicksGet: get current ticks count\. Value is internally stored\.
+TicksGet: get current ticks count. Value is internally stored.
 
